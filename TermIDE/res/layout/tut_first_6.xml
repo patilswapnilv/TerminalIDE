@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_weight="1"
+              android:orientation="vertical" >
+
+    <TextView android:id="@+id/help_title"
+                  android:gravity="center"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="10dip"
+                  android:paddingBottom="10dip"
+                  android:textSize="22dip"
+                  android:text="Tutorial 6"/>
+
+    <ScrollView android:id="@+id/help_scrollview"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+
+    <TextView android:id="@+id/mixer_deck1_text"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:text=
+"OK - Now that we understand quite how wonderful vim can be, let's compile a c applications.\n
+\n
+GCC is not extracted by default, since it takes up about 70mb, or 20mb unextracted.\n
+\n
+You need to extract it to the right location for all my scripts to work, so I have created a very simple installer.\n
+\n
+# cat `which install_gcc`\n
+\n
+This will show what is actually being done. Simple. Now run it..\n
+\n
+# install_gcc\n
+\n
+Now GCC, and more importantly the 'terminal-gcc' script, should be installed..\n
+\n
+First cd into the project folder (Remember to use TAB to complete) :\n
+\n
+# cd ~/system/src/c_examples/chello/\n
+\n
+List the contents : \n
+\n
+# ls (Allthough I prefer ll)\n
+\n
+There are 2 file here. hello.c and a Makefile. Lets look at the file\n
+\n
+# cat hello.c\n
+\n
+You can compile the c code with \n
+\n
+# terminal-gcc -o hello hello.c\n
+\n
+And there it is. You should now have an executable in the folder called 'hello'. Run it with \n
+\n
+# ./hello\n
+\n
+You can add more files by adding them at the end of the command. So if you had file1.c and file2.c you would use\n
+\n
+# terminal-gcc -o hello file1.c file2.c\n
+\n
+You don't need to add the .h files, they should be in this folder. Now let's see what terminal-gcc is actually doing..\n
+\n
+# cat `which terminal-gcc`\n
+\n
+As you can see I am calling arm-eabi-gcc with some specific parameters. You need these for it to work on Android.\n
+\n
+If you want to know what is 'actually' being called you need to set the environment variable DEBUG_GCC\n
+\n
+# export DEBUG_GCC=true\n
+\n
+And to stop\n
+\n
+# export DEBUG_GCC=\n
+\n
+Also - you can add '-v' to get verbose output.\n
+\n
+Now let's see the Makefile..\n
+\n
+# cat Makefile\n
+\n
+This is a very simple generic Makefile. It scans the folder for c files and then compiles them.\n
+\n
+To use the Makefile :\n
+\n
+# make clean (This will delete all the compiled files..)\n
+\n
+# make\n
+\n
+'make' only compiles the files that need to be compiled. Unlike the previous method that just re-compiles everything.
+Best of all, this works nicely with vim.. or terminalide.. :-)\n
+\n
+So - run terminalide.\n
+\n
+# terminalide\n
+\n
+The fact you don't have a ./src folder doesn't matter..\n
+\n
+Once vim/terminalide is up and running you can compile everything by pressing F7.\n
+\n
+And you can scan through errors, just like in the java tutorials, with F8 and F9.\n
+\n
+Nice.\n
+\n
+Now let's move on to a .cpp example..\n
+" />
+
+</ScrollView>
+
+</LinearLayout>

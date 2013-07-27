@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.spartacusrex.spartacuside"
+      android:versionCode="102"
+      android:versionName="2.02">
+    
+    <uses-sdk android:minSdkVersion="10"/>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <application android:icon="@drawable/terminal" android:label="Terminal IDE">
+        
+        <activity   android:name=".Start"
+                    android:theme="@style/Theme"
+                    android:launchMode="singleTask">
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+        <activity android:name="Term"
+                  android:theme="@style/Theme"
+                  android:configChanges="keyboard|keyboardHidden|orientation"
+                  android:windowSoftInputMode="adjustResize|stateVisible"/>
+
+        <activity android:name="TermPreferences"/>
+        <activity android:name="WindowList"/>
+
+        <activity android:name=".startup.tutorial.tutlist"/>
+        <activity android:name=".startup.tutorial.vimlist"/>
+        <activity android:name=".startup.tutorial.tutview"/>
+        <activity android:name=".startup.tutorial.remotelist"/>
+
+        <activity android:name=".startup.introscreen"/>
+
+        <activity android:name=".startup.installer"
+                android:configChanges="keyboardHidden|orientation"/>
+
+        <activity android:name=".startup.TerminalIDEPrefs"/>
+
+        <activity android:name=".keyboard.KeyboardPrefs"/>
+
+        <service android:name="TermService" />
+
+        <service android:name=".keyboard.TerminalKeyboard" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+        </service>
+        
+    </application>
+    
+</manifest> 
