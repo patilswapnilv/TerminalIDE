@@ -1,6 +1,9 @@
 ==Terminal IDE==
+
 Contributors: Swapnil V. Patil
+
 Donate link: http://TechMantra.org
+
 Tags: IDE, Android, C, C++, Java
 
 == Description ==
@@ -16,9 +19,11 @@ A full Terminal emulator + custom ANSI keyboard ensure good bash, vim and busybo
 All set up and ready to run in a NON-ROOT environment. Normal user permissions are enough to run all of this.
 
 ==Installation==
+
 If you are looking just for installation and not the code, just copy the .apk file provided, and run it in your Android device.
 
 ==Contact==
+
 patilswapnilv@gmail.com
 OR
 swapnil@techmantra.org
