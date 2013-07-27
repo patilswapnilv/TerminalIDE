@@ -16,7 +16,7 @@ A full Terminal emulator + custom ANSI keyboard ensure good bash, vim and busybo
 All set up and ready to run in a NON-ROOT environment. Normal user permissions are enough to run all of this.
 
 ==Installation==
-This is the source code. You will have to run this via Elipse and export the .apk
+If you are looking just for installation and not the code, just copy the .apk file provided, and run it in your Android device.
 
 ==Contact==
 patilswapnilv@gmail.com
