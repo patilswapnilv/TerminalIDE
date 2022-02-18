@@ -21,9 +21,3 @@ All set up and ready to run in a NON-ROOT environment. Normal user permissions a
 ==Installation==
 
 If you are looking just for installation and not the code, just copy the .apk file provided, and run it in your Android device.
-
-==Contact==
-
-patilswapnilv@gmail.com
-OR
-swapnil@techmantra.org
